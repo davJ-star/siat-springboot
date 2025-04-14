@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/main/java/com/siat/siat/test/ctrl/TestCtrl.java",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1744596281295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744596524932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,46 @@\n package com.siat.siat.test.ctrl;\r\n \r\n+\r\n+/*\r\n+ 객체 생성과 관련된 annotation\r\n+    * @Controller : Spring MVC에서 Controller 역할을 하는 클래스에 붙이는 annotation\r\n+    * @RestController : @Controller + @ResponseBody. JSON/XML 형태로 응답을 보내는 Controller에 붙이는 annotation\r\n+    * @Service : 비즈니스 로직을 처리하는 클래스에 붙이는 annotation\r\n+    * @Repository : 데이터베이스와의 상호작용을 처리하는 클래스에 붙이는 annotation\r\n+    * @Component : Spring에서 관리하는 일반적인 컴포넌트에 붙이는 annotation\r\n+    * @Configuration : Spring의 설정 정보를 담고 있는 클래스에 붙이는 annotation\r\n+    * @Bean : Spring에서 관리하는 객체를 생성하는 메서드에 붙이는 annotation\r\n+    * @Autowired : Spring에서 관리하는 객체를 주입받는 annotation\r\n+    * @Value : Spring에서 관리하는 프로퍼티 값을 주입받는 annotation\r\n+    * @Qualifier : Spring에서 관리하는 객체를 주입받을 때, 어떤 객체를 주입받을지 지정하는 annotation\r\n+    * @Primary : Spring에서 관리하는 객체를 주입받을 때, 기본적으로 주입받을 객체를 지정하는 annotation\r\n+    * @Scope : Spring에서 관리하는 객체의 범위를 지정하는 annotation\r\n+    * @RequestMapping : HTTP 요청을 처리하는 메서드에 붙이는 annotation\r\n+    * @GetMapping : HTTP GET 요청을 처리하는 메서드에 붙이는 annotation\r\n+    * @PostMapping : HTTP POST 요청을 처리하는 메서드에 붙이는 annotation\r\n+    * @PutMapping : HTTP PUT 요청을 처리하는 메서드에 붙이는 annotation\r\n+    * @DeleteMapping : HTTP DELETE 요청을 처리하는 메서드에 붙이는 annotation\r\n+    * @PathVariable : URL 경로에서 변수를 추출하는 annotation\r\n+    * @RequestParam : HTTP 요청 파라미터를 추출하는 annotation\r\n+    * @RequestBody : HTTP 요청 본문을 추출하는 annotation\r\n+    * @ResponseBody : HTTP 응답 본문을 작성하는 annotation\r\n+    * @ResponseStatus : HTTP 응답 상태 코드를 지정하는 annotation\r\n+    * @ExceptionHandler : 예외를 처리하는 메서드에 붙이는 annotation\r\n+    * @ControllerAdvice : 전역적으로 예외를 처리하는 클래스에 붙이는 annotation\r\n+    * @RestControllerAdvice : @ControllerAdvice + @ResponseBody. 전역적으로 예외를 처리하는 클래스에 붙이는 annotation\r\n+    * @CrossOrigin : CORS(Cross-Origin Resource Sharing)를 설정하는 annotation\r\n+    * @SessionAttributes : 세션에 저장할 모델 속성을 지정하는 annotation\r\n+    * @ModelAttribute : 모델 속성을 설정하는 annotation\r\n+    * @InitBinder : 데이터 바인딩을 초기화하는 메서드에 붙이는 annotation\r\n+    * @SessionScope : 세션 범위의 Bean을 생성하는 annotation\r\n+    * @RequestScope : 요청 범위의 Bean을 생성하는 annotation\r\n+    * @ApplicationScope : 애플리케이션 범위의 Bean을 생성하는 annotation\r\n+    * @Async : 비동기 처리를 위한 annotation\r\n+    * @Transactional : 트랜잭션 처리를 위한 annotation\r\n+    * @Cacheable : 캐시를 사용할 수 있는 메서드에 붙이는 annotation\r\n+    * @CachePut : 캐시를 업데이트하는 메서드에 붙이는 annotation\r\n+    * @CacheEvict : 캐시를 삭제하는 메서드에 붙이는 annotation\r\n+ */\r\n public class TestCtrl {\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1744596539608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n package com.siat.siat.test.ctrl;\r\n \r\n+/*\r\n+ 객체 생성과 관련된 annotation\r\n+*/\r\n \r\n /*\r\n  객체 생성과 관련된 annotation\r\n     * @Controller : Spring MVC에서 Controller 역할을 하는 클래스에 붙이는 annotation\r\n"
+                },
+                {
+                    "date": 1744596553041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,21 @@\n package com.siat.siat.test.ctrl;\r\n \r\n /*\r\n  객체 생성과 관련된 annotation\r\n+    * @Controller : Spring MVC에서 Controller 역할을 하는 클래스에 붙이는 annotation\r\n+    * @RestController : @Controller + @ResponseBody. JSON/XML 형태로 응답을 보내는 Controller에 붙이는 annotation\r\n+    * @Service : 비즈니스 로직을 처리하는 클래스에 붙이는 annotation\r\n+    * @Repository : 데이터베이스와의 상호작용을 처리하는 클래스에 붙이는 annotation\r\n+    * @Component : Spring에서 관리하는 일반적인 컴포넌트에 붙이는 annotation\r\n+    * @Configuration : Spring의 설정 정보를 담고 있는 클래스에 붙이는 annotation\r\n+    * @Bean : Spring에서 관리하는 객체를 생성하는 메서드에 붙이는 annotation\r\n+    * @Autowired : Spring에서 관리하는 객체를 주입받는 annotation\r\n+    * @Value : Spring에서 관리하는 프로퍼티 값을 주입받는 annotation\r\n+    * @Qualifier : Spring에서 관리하는 객체를 주입받을 때, 어떤 객체를 주입받을지 지정하는 annotation\r\n+    * @Primary : Spring에서 관리하는 객체를 주입받을 때, 기본적으로 주입받을 객체를 지정하는 annotation\r\n+    * @Scope : Spring에서 관리하는 객체의 범위를 지정하는 annotation\r\n+ */\r\n */\r\n \r\n /*\r\n  객체 생성과 관련된 annotation\r\n"
+                },
+                {
+                    "date": 1744596597731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,18 @@\n package com.siat.siat.test.ctrl;\r\n \r\n /*\r\n  객체 생성과 관련된 annotation\r\n+    * @Component : Spring에서 관리하는 일반적인 컴포넌트에 붙이는 annotation\r\n     * @Controller : Spring MVC에서 Controller 역할을 하는 클래스에 붙이는 annotation\r\n+    * @Service : 비즈니스 로직을 처리하는 클래스에 붙이는 annotation\r\n+    * @Repository : 데이터베이스와의 상호작용을 처리하는 클래스에 붙이는 annotation\r\n+    \r\n+ */\r\n+\r\n+/*\r\n+ 객체 생성과 관련된 annotation\r\n+    * @Controller : Spring MVC에서 Controller 역할을 하는 클래스에 붙이는 annotation\r\n     * @RestController : @Controller + @ResponseBody. JSON/XML 형태로 응답을 보내는 Controller에 붙이는 annotation\r\n     * @Service : 비즈니스 로직을 처리하는 클래스에 붙이는 annotation\r\n     * @Repository : 데이터베이스와의 상호작용을 처리하는 클래스에 붙이는 annotation\r\n     * @Component : Spring에서 관리하는 일반적인 컴포넌트에 붙이는 annotation\r\n"
+                },
+                {
+                    "date": 1744596631395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,15 @@\n     * @Service : 비즈니스 로직을 처리하는 클래스에 붙이는 annotation\r\n     * @Repository : 데이터베이스와의 상호작용을 처리하는 클래스에 붙이는 annotation\r\n  */\r\n \r\n+public class TestCtrl {\r\n+    \r\n+}\r\n+\r\n+\r\n+\r\n+\r\n /*\r\n  객체 생성과 관련된 annotation\r\n     * @Controller : Spring MVC에서 Controller 역할을 하는 클래스에 붙이는 annotation\r\n     * @RestController : @Controller + @ResponseBody. JSON/XML 형태로 응답을 보내는 Controller에 붙이는 annotation\r\n@@ -63,8 +70,5 @@\n     * @Transactional : 트랜잭션 처리를 위한 annotation\r\n     * @Cacheable : 캐시를 사용할 수 있는 메서드에 붙이는 annotation\r\n     * @CachePut : 캐시를 업데이트하는 메서드에 붙이는 annotation\r\n     * @CacheEvict : 캐시를 삭제하는 메서드에 붙이는 annotation\r\n- */\r\n-public class TestCtrl {\r\n-    \r\n-}\r\n+ */\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1744596644649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,17 @@\n package com.siat.siat.test.ctrl;\r\n \r\n+import org.springframework.stereotype.Controller;\r\n+\r\n /*\r\n  객체 생성과 관련된 annotation\r\n     * @Component : Spring에서 관리하는 일반적인 컴포넌트에 붙이는 annotation\r\n     * @Controller : Spring MVC에서 Controller 역할을 하는 클래스에 붙이는 annotation\r\n     * @Service : 비즈니스 로직을 처리하는 클래스에 붙이는 annotation\r\n     * @Repository : 데이터베이스와의 상호작용을 처리하는 클래스에 붙이는 annotation\r\n  */\r\n-\r\n+@Controller\r\n+@RequestMapping(\"/test\") // URL 경로를 지정하는 annotation\r\n public class TestCtrl {\r\n     \r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1744596281295,
+            "name": "Commit-0",
+            "content": "package com.siat.siat.test.ctrl;\r\n\r\npublic class TestCtrl {\r\n    \r\n}\r\n"
+        }
+    ]
+}

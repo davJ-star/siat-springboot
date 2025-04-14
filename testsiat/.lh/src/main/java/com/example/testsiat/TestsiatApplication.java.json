@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/main/java/com/example/testsiat/TestsiatApplication.java",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1744612124682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744612176388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n package com.example.testsiat;\n \n import org.springframework.boot.SpringApplication;\n import org.springframework.boot.autoconfigure.SpringBootApplication;\n+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;\n \n @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)\n \n public class TestsiatApplication {\n"
+                }
+            ],
+            "date": 1744612124681,
+            "name": "Commit-0",
+            "content": "package com.example.testsiat;\n\nimport org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)\n\npublic class TestsiatApplication {\n\n\tpublic static void main(String[] args) {\n\t\tSpringApplication.run(TestsiatApplication.class, args);\n\t}\n\n}\n"
+        }
+    ]
+}

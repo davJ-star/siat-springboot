@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/main/java/com/example/testsiat/test/dao/TestDao.java",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1744612332488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744612341362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,12 @@\n package com.example.testsiat.test.dao;\r\n \r\n+import org.springframework.stereotype.Repository;\r\n+\r\n+@Repository // @Repository는 데이터베이스와의 상호작용을 처리하는 클래스에 붙이는 annotation이다.\r\n public class TestDao {\r\n     \r\n+    public void insertRow() {\r\n+        System.out.println(\"insertRow() 호출\");\r\n+    }\r\n+\r\n }\r\n"
+                }
+            ],
+            "date": 1744612332488,
+            "name": "Commit-0",
+            "content": "package com.example.testsiat.test.dao;\r\n\r\npublic class TestDao {\r\n    \r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/main/webapp/index.jsp",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1744601018834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744601051449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+<%@ page language=\"java\" contentType=\"text/html; charset=UTF-8\"\r\n+    pageEncoding=\"UTF-8\"%>\r\n+    \r\n+<!DOCTYPE html>\r\n+<html lang=\"en\">\r\n+<head>\r\n+    <meta charset=\"UTF-8\">\r\n+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n+    <title>Document</title>\r\n+</head>\r\n+<body>\r\n+    insert.jsp\r\n+    <script>\r\n+        location.href = \"/\";\r\n+        // location.href = \"${pageContext.request.contextPath}/insert.jsp\";\r\n+    </script>\r\n+</body>\r\n+</html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1744606823081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,20 +14,5 @@\n         location.href = \"/\";\r\n         // location.href = \"${pageContext.request.contextPath}/insert.jsp\";\r\n     </script>\r\n </body>\r\n-</html>\n-<%@ page language=\"java\" contentType=\"text/html; charset=UTF-8\"\r\n-    pageEncoding=\"UTF-8\"%>\r\n-    \r\n-<!DOCTYPE html>\r\n-<html lang=\"en\">\r\n-<head>\r\n-    <meta charset=\"UTF-8\">\r\n-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n-    <title>Document</title>\r\n-</head>\r\n-<body>\r\n-    insert.jsp\r\n-    \r\n-</body>\r\n </html>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1744601018834,
+            "name": "Commit-0",
+            "content": "<%@ page language=\"java\" contentType=\"text/html; charset=UTF-8\"\r\n    pageEncoding=\"UTF-8\"%>\r\n    \r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n    insert.jsp\r\n    \r\n</body>\r\n</html>"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/main/resources/application.properties",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744612200526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744612200526,
+            "name": "Commit-0",
+            "content": "spring.application.name=testsiat\n\nserver.port=8088\n# 경로\nspring.mvc.view.prefix=/WEB-INF/views/\n# 파일 확장자\nspring.mvc.view.suffix=.jsp"
+        }
+    ]
+}

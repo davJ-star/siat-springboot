@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/main/java/com/example/testsiat/landing/IndexCtrl.java",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1744612464074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744612476699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,21 @@\n package com.example.testsiat.landing;\r\n \r\n+import org.springframework.stereotype.Controller;\r\n+import org.springframework.web.bind.annotation.RequestMapping;\r\n+\r\n+@Controller\r\n public class IndexCtrl {\r\n+    @RequestMapping(\"index\")\r\n+    public String index() {\r\n+        System.out.println(\"index() 호출\");\r\n+        return \"landing\"; // landing.jsp 파일을 반환\r\n+    }\r\n     \r\n+    // @RequestMapping(\"/index\")\r\n+    // public String index(@RequestParam(\"name\") String name) {\r\n+    //     System.out.println(\"name: \" + name);\r\n+    //     return \"index\"; // index.jsp 파일을 반환\r\n+    // }\r\n+\r\n+    \r\n }\r\n"
+                },
+                {
+                    "date": 1744612535118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import org.springframework.web.bind.annotation.RequestMapping;\r\n \r\n @Controller\r\n public class IndexCtrl {\r\n-    @RequestMapping(\"index\")\r\n+    @RequestMapping(\"/index\")\r\n     public String index() {\r\n         System.out.println(\"index() 호출\");\r\n         return \"landing\"; // landing.jsp 파일을 반환\r\n     }\r\n"
+                }
+            ],
+            "date": 1744612464074,
+            "name": "Commit-0",
+            "content": "package com.example.testsiat.landing;\r\n\r\npublic class IndexCtrl {\r\n    \r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/main/resources/application.properties",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1744593305250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744593314355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n spring.application.name=siat\n \n server.port=8080\n-spring.datasource.url=jdbc:mysql://localhost:3306/siat\n-spring.datasource.username=root\n-spring.datasource.password=123456\n-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\n-spring.jpa.hibernate.ddl-auto=update\n-spring.jpa.show-sql=true\n-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect\n-spring.jpa.properties.hibernate.format_sql=true\n-spring.jpa.properties.hibernate.use_sql_comments=true\n+# spring.datasource.url=jdbc:mysql://localhost:3306/siat\n+# spring.datasource.username=root\n+# spring.datasource.password=123456\n+# spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\n+# spring.jpa.hibernate.ddl-auto=update\n+# spring.jpa.show-sql=true\n+# spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect\n+# spring.jpa.properties.hibernate.format_sql=true\n+# spring.jpa.properties.hibernate.use_sql_comments=true\n"
+                },
+                {
+                    "date": 1744594455701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n spring.application.name=siat\n \n-server.port=8080\n+server.port=8088\n # spring.datasource.url=jdbc:mysql://localhost:3306/siat\n # spring.datasource.username=root\n # spring.datasource.password=123456\n # spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\n"
+                },
+                {
+                    "date": 1744600361393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n spring.application.name=siat\n \n server.port=8088\n+spring.mvc.view.prefix=/WEB-INF/jsp/\n+spring.mvc.view.suffix=.jsp\n # spring.datasource.url=jdbc:mysql://localhost:3306/siat\n # spring.datasource.username=root\n # spring.datasource.password=123456\n # spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\n"
+                },
+                {
+                    "date": 1744600519908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n spring.application.name=siat\n \n server.port=8088\n-spring.mvc.view.prefix=/WEB-INF/jsp/\n+spring.mvc.view.prefix=/WEB-INF/views/\n spring.mvc.view.suffix=.jsp\n # spring.datasource.url=jdbc:mysql://localhost:3306/siat\n # spring.datasource.username=root\n # spring.datasource.password=123456\n"
+                },
+                {
+                    "date": 1744600535199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n spring.application.name=siat\n \n server.port=8088\n-spring.mvc.view.prefix=/WEB-INF/views/\n+# 경로\n+spring.mvc.view.prefix=/WEB-INF/views/ \n+# 파일 확장자\n spring.mvc.view.suffix=.jsp\n # spring.datasource.url=jdbc:mysql://localhost:3306/siat\n # spring.datasource.username=root\n # spring.datasource.password=123456\n"
+                },
+                {
+                    "date": 1744600799641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n # 경로\n spring.mvc.view.prefix=/WEB-INF/views/ \n # 파일 확장자\n spring.mvc.view.suffix=.jsp\n+\n+\n # spring.datasource.url=jdbc:mysql://localhost:3306/siat\n # spring.datasource.username=root\n # spring.datasource.password=123456\n # spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\n"
+                },
+                {
+                    "date": 1744601542605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n spring.application.name=siat\n \n server.port=8088\n # 경로\n-spring.mvc.view.prefix=/WEB-INF/views/ \n+spring.mvc.view.prefix=/WEB-INF/views/\n # 파일 확장자\n spring.mvc.view.suffix=.jsp\n \n \n"
+                },
+                {
+                    "date": 1744601623902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,4 @@\n # 경로\n spring.mvc.view.prefix=/WEB-INF/views/\n # 파일 확장자\n spring.mvc.view.suffix=.jsp\n-\n-\n-# spring.datasource.url=jdbc:mysql://localhost:3306/siat\n-# spring.datasource.username=root\n-# spring.datasource.password=123456\n-# spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\n-# spring.jpa.hibernate.ddl-auto=update\n-# spring.jpa.show-sql=true\n-# spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect\n-# spring.jpa.properties.hibernate.format_sql=true\n-# spring.jpa.properties.hibernate.use_sql_comments=true\n"
+                },
+                {
+                    "date": 1744612947888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n spring.application.name=siat\n \n-server.port=8088\n+server.port=8099\n # 경로\n spring.mvc.view.prefix=/WEB-INF/views/\n # 파일 확장자\n spring.mvc.view.suffix=.jsp\n"
+                }
+            ],
+            "date": 1744593305250,
+            "name": "Commit-0",
+            "content": "spring.application.name=siat\n\nserver.port=8080\nspring.datasource.url=jdbc:mysql://localhost:3306/siat\nspring.datasource.username=root\nspring.datasource.password=123456\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\nspring.jpa.hibernate.ddl-auto=update\nspring.jpa.show-sql=true\nspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect\nspring.jpa.properties.hibernate.format_sql=true\nspring.jpa.properties.hibernate.use_sql_comments=true\n"
+        }
+    ]
+}

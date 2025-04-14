@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/main/java/com/siat/siat/landing/IndexCtrl.java",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1744601253664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744601283996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n import org.springframework.stereotype.Controller;\r\n \r\n @Controller\r\n public class IndexCtrl {\r\n-    // @RequestMapping(\"/index\")\r\n-    // public String index() {\r\n-    //     return \"index\"; // index.jsp 파일을 반환\r\n-    // }\r\n+    @RequestMapping(\"/index\")\r\n+    public String index() {\r\n+        return \"index\"; // index.jsp 파일을 반환\r\n+    }\r\n     \r\n     // @RequestMapping(\"/index\")\r\n     // public String index(@RequestParam(\"name\") String name) {\r\n     //     System.out.println(\"name: \" + name);\r\n"
+                },
+                {
+                    "date": 1744601297276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n package com.siat.siat.landing;\r\n \r\n import org.springframework.stereotype.Controller;\r\n+import org.springframework.web.bind.annotation.RequestMapping;\r\n \r\n @Controller\r\n public class IndexCtrl {\r\n     @RequestMapping(\"/index\")\r\n"
+                },
+                {
+                    "date": 1744601314953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n @Controller\r\n public class IndexCtrl {\r\n     @RequestMapping(\"/index\")\r\n     public String index() {\r\n+        System.out.println(\"index() 호출\");\r\n         return \"index\"; // index.jsp 파일을 반환\r\n     }\r\n     \r\n     // @RequestMapping(\"/index\")\r\n"
+                },
+                {
+                    "date": 1744601320665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n public class IndexCtrl {\r\n     @RequestMapping(\"/index\")\r\n     public String index() {\r\n         System.out.println(\"index() 호출\");\r\n-        return \"index\"; // index.jsp 파일을 반환\r\n+        return \"landing\"; // index.jsp 파일을 반환\r\n     }\r\n     \r\n     // @RequestMapping(\"/index\")\r\n     // public String index(@RequestParam(\"name\") String name) {\r\n"
+                },
+                {
+                    "date": 1744601431410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import org.springframework.web.bind.annotation.RequestMapping;\r\n \r\n @Controller\r\n public class IndexCtrl {\r\n-    @RequestMapping(\"/index\")\r\n+    @RequestMapping(\"index\")\r\n     public String index() {\r\n         System.out.println(\"index() 호출\");\r\n         return \"landing\"; // landing.jsp 파일을 반환\r\n     }\r\n"
+                }
+            ],
+            "date": 1744601253664,
+            "name": "Commit-0",
+            "content": "package com.siat.siat.landing;\r\n\r\nimport org.springframework.stereotype.Controller;\r\n\r\n@Controller\r\npublic class IndexCtrl {\r\n    // @RequestMapping(\"/index\")\r\n    // public String index() {\r\n    //     return \"index\"; // index.jsp 파일을 반환\r\n    // }\r\n    \r\n    // @RequestMapping(\"/index\")\r\n    // public String index(@RequestParam(\"name\") String name) {\r\n    //     System.out.println(\"name: \" + name);\r\n    //     return \"index\"; // index.jsp 파일을 반환\r\n    // }\r\n\r\n    \r\n}\r\n"
+        }
+    ]
+}

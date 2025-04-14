@@ -1,0 +1,30 @@
+{
+    "sourceFile": "build.gradle",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1744600194205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744600204501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,18 +23,18 @@\n \tmavenCentral()\n }\n \n dependencies {\n-\n+\t// \n \tmplementation 'jakarta.servlet:jakarta.servlet-api' \n \timplementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api' \n \timplementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'\n \timplementation 'org.apache.tomcat.embed:tomcat-embed-jasper'\n \t///////////////////////////////////////////////////////////////////////////\n-\t\n \t// swagger + spring 3.x \n \timplementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'\n \n+\n \timplementation 'org.springframework.boot:spring-boot-starter-data-jpa'\n \timplementation 'org.springframework.boot:spring-boot-starter-web'\n \timplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'\n \tcompileOnly 'org.projectlombok:lombok'\n"
+                },
+                {
+                    "date": 1744600229452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \tmavenCentral()\n }\n \n dependencies {\n-\t// \n+\t// 스프링부트 3.0에서 JSP를 사용하고자 할때만 추가\n \tmplementation 'jakarta.servlet:jakarta.servlet-api' \n \timplementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api' \n \timplementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'\n \timplementation 'org.apache.tomcat.embed:tomcat-embed-jasper'\n"
+                },
+                {
+                    "date": 1744607289333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,10 @@\n }\n \n dependencies {\n \t// 스프링부트 3.0에서 JSP를 사용하고자 할때만 추가\n-\tmplementation 'jakarta.servlet:jakarta.servlet-api' \n-\timplementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api' \n+\tmplementation 'jakarta.servlet:jakarta.servlet-api'\n+\timplementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'\n \timplementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'\n \timplementation 'org.apache.tomcat.embed:tomcat-embed-jasper'\n \t///////////////////////////////////////////////////////////////////////////\n \t// swagger + spring 3.x \n"
+                }
+            ],
+            "date": 1744600194205,
+            "name": "Commit-0",
+            "content": "plugins {\n\tid 'java'\n\tid 'org.springframework.boot' version '3.3.10'\n\tid 'io.spring.dependency-management' version '1.1.7'\n}\n\ngroup = 'com.siat'\nversion = '0.0.1-SNAPSHOT'\n\njava {\n\ttoolchain {\n\t\tlanguageVersion = JavaLanguageVersion.of(17)\n\t}\n}\n\nconfigurations {\n\tcompileOnly {\n\t\textendsFrom annotationProcessor\n\t}\n}\n\nrepositories {\n\tmavenCentral()\n}\n\ndependencies {\n\n\tmplementation 'jakarta.servlet:jakarta.servlet-api' \n\timplementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api' \n\timplementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'\n\timplementation 'org.apache.tomcat.embed:tomcat-embed-jasper'\n\t///////////////////////////////////////////////////////////////////////////\n\t\n\t// swagger + spring 3.x \n\timplementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'\n\n\timplementation 'org.springframework.boot:spring-boot-starter-data-jpa'\n\timplementation 'org.springframework.boot:spring-boot-starter-web'\n\timplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'\n\tcompileOnly 'org.projectlombok:lombok'\n\tdevelopmentOnly 'org.springframework.boot:spring-boot-devtools'\n\truntimeOnly 'com.oracle.database.jdbc:ojdbc11'\n\tannotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'\n\tannotationProcessor 'org.projectlombok:lombok'\n\ttestImplementation 'org.springframework.boot:spring-boot-starter-test'\n\ttestImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.4'\n\ttestRuntimeOnly 'org.junit.platform:junit-platform-launcher'\n}\n\ntasks.named('test') {\n\tuseJUnitPlatform()\n}\n"
+        }
+    ]
+}
