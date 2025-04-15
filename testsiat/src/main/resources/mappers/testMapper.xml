@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.testsiat.test.dao.testMapper">
+    <insert id="insertRow"
+            parameterType="todoRequestDTO">
+        INSERT INTO JDBC_TODO_TBL(SEQ, TITLE, CONTENT, PRIORITY)
+        VALUES(JDBC_SEQ.NEXTVAL, #{title}, #{content}, #{priority})
+    </insert>
+    <!-- <select id="selectRow">
+        SELECT * FROM JDBC_TODO_TBL
+    </select>
+    <update id="updateRow">
+        UPDATE JDBC_TODO_TBL SET CONTENT = #{}, STATUS = #{} WHERE SEQ = #{}
+    </update>
+
+    <delete id="deleteRow">
+        DELETE FROM JDBC_TODO_TBL WHERE SEQ = #{}
+    </delete> -->
+</mapper>
