@@ -30,7 +30,7 @@
     <tbody>
     	<c:forEach items="${list}" var="dto">
 	      <tr>
-	        <td><a href="./read.todo?seq=${dto.seq}">${dto.title}</a></td>
+	        <td><a href="./view/${dto.seq}">${dto.title}</a></td>
 	        <td><a href="">${dto.status}</a></td>
 	        <td><a href="">${dto.priority}</a></td>
 	      </tr>

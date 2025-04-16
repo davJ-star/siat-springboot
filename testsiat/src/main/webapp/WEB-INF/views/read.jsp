@@ -10,16 +10,16 @@
 </head>
 <body>
 	<c:if test = "${read != null}" >
-		<form action="./update.todo" method="put">
+		<form action="../todo/update" method="put">
 			<input type = "text" name = "seq" value = "${read.seq}" readonly> <br/>
 			<input type = "text" name = "title" value = "${read.title}" readonly> <br/>
 			<input type = "text" name = "content" value = "${read.content}" > <br/>
-			<input type = "text" name = "startdate" value = "${read.startdate}" readonly> <br/>
+			<input type = "text" name = "startdate" value = "${read.startDate}" readonly> <br/>
 			<input type = "text" name = "status" value = "${read.status}" > <br/>
-			<input type = "text" name = "enddate" value = "${read.enddate}" readonly> <br/>
+			<input type = "text" name = "enddate" value = "${read.endDate}" readonly> <br/>
 			<input type = "number" name = "priority" value = "${read.priority}" readonly> <br/>
 			<input type = "submit" value="수정"> <br/>
-			<a href="./delete.todo?seq=${read.seq}">삭제</a>
+			<a href="../../todo/delete?seq=${read.seq}">삭제</a>
 			
 		</form>
 	</c:if>

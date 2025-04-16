@@ -83,8 +83,8 @@ public class TodoCtrl {
 
     // http://localhost:8080/test/view/1
     // 변수명이 동일해야 자동으로 매핑된다.
-    @GetMapping("/read/{seq}") // URL 경로를 지정하는 annotation
-    public String read(@PathVariable int seq, Model model) { // public String read( int seq)
+    @GetMapping("/read") // URL 경로를 지정하는 annotation
+    public String read(@RequestParam int seq, Model model) { // public String read( int seq)
         System.out.println("debug >>>>> read test seq: " + seq);
         TodoResponseDTO response = service.readService(seq); // TestService의 readService() 메서드를 호출한다.
         System.out.println("debug >>>>> read test response: " + response);
@@ -105,7 +105,7 @@ public class TodoCtrl {
     // http://localhost:8080/test/view/1
     // 변수명이 동일해야 자동으로 매핑된다.
     @GetMapping("/view/{seq}") // URL 경로를 지정하는 annotation
-    public String view(@PathVariable int seq, Model model) { // public String read( int seq)
+    public String view(@PathVariable("seq") int seq, Model model) { // public String read( int seq)
         System.out.println("debug >>>>> view test seq: " + seq);
         TodoResponseDTO response = service.readService(seq); // TestService의 readService() 메서드를 호출한다.
         System.out.println("debug >>>>> view test response: " + response);
@@ -120,7 +120,7 @@ public class TodoCtrl {
 
 
         // 기본화면 분기: forward
-        return "test/view"; // test/view.jsp 파일을 반환한다.
+        return "read"; // test/view.jsp 파일을 반환한다.
     } 
 
 
@@ -145,7 +145,7 @@ public class TodoCtrl {
         System.out.println("debug >>>>> update test flag: " + flag);
         if (flag != 0) {
             System.out.println("debug >>>>> update test success: " + flag);
-            return "redirect:/test/select"; // test/select.jsp 파일을 반환한다.
+            return "redirect:/todo/list"; // test/select.jsp 파일을 반환한다.
         } else {
             System.out.println("debug >>>>> update test fail: " + flag);
             return "redirect:/test/update"; // test/update.jsp 파일을 반환한다.
@@ -169,7 +169,7 @@ public class TodoCtrl {
         List<TodoResponseDTO> list = service.selectService(); // TestService의 selectService() 메서드를 호출한다.
         model.addAttribute("list", list); // model에 list를 추가한다.
 
-        return "list"; // test/select.jsp 파일을 반환한다.
+        return "redirect:/todo/list"; // test/select.jsp 파일을 반환한다.
     }
     
     // @GetMapping("/select") // URL 경로를 지정하는 annotation
