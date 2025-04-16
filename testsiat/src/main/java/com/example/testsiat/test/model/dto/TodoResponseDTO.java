@@ -7,7 +7,7 @@ import lombok.Setter;
 
 
 // @Builder
-// @Getter
+@Getter
 @Setter
 @ToString
 public class TodoResponseDTO {

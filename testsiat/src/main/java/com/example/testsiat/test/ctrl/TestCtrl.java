@@ -30,7 +30,8 @@ import com.example.testsiat.test.service.TestService;
 /*
  객체 생성과 관련된 annotation
     * @Component : Spring에서 관리하는 일반적인 컴포넌트에 붙이는 annotation
-    * @Controller : Spring MVC에서 Controller 역할을 하는 클래스에 붙이는 annotation
+    * @RestController : @Controller + @ResponseBody. JSON/XML 형태로 응답을 보내는 Controller에 붙이는 annotation
+    * @Controller : Spring MVC에서 Controller 역할을 하는 클래스에 붙이는 annotation     
     * @Service : 비즈니스 로직을 처리하는 클래스에 붙이는 annotation
     * @Repository : 데이터베이스와의 상호작용을 처리하는 클래스에 붙이는 annotation
  */
@@ -59,7 +60,7 @@ public class TestCtrl {
     public String insert() {
         System.out.println("insert() 호출");
         // service
-        service.insertRow();
+        // service.insertRow();
         return "insert"; // insert.jsp 파일을 반환
     }
 
