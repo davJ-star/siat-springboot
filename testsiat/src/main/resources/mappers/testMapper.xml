@@ -4,11 +4,11 @@
 <mapper namespace="com.example.testsiat.test.dao.TestMapper">
     <insert id="insertRow"
             parameterType="todoRequestDTO">
-            <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.Integer">  
+            <selectKey keyProperty="seq" order="BEFORE" resultType="java.lang.Integer">  
                 SELECT JDBC_SEQ.NEXTVAL FROM DUAL
             </selectKey>
         INSERT INTO JDBC_TODO_TBL(SEQ, TITLE, CONTENT, PRIORITY)
-        VALUES(JDBC_SEQ.NEXTVAL, #{title}, #{content}, #{priority})
+        VALUES(#{seq}, #{title}, #{content}, #{priority})
     </insert>
     <select id="selectRow"
             resultType="todoResponseDTO">
