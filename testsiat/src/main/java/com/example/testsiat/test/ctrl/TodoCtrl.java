@@ -169,7 +169,7 @@ public class TodoCtrl {
         List<TodoResponseDTO> list = service.selectService(); // TestService의 selectService() 메서드를 호출한다.
         model.addAttribute("list", list); // model에 list를 추가한다.
 
-        return "redirect:/todo/list"; // test/select.jsp 파일을 반환한다.
+        return "list"; // test/select.jsp 파일을 반환한다.
     }
     
     // @GetMapping("/select") // URL 경로를 지정하는 annotation
