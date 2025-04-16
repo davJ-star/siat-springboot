@@ -4,17 +4,37 @@
 <mapper namespace="com.example.testsiat.test.dao.TestMapper">
     <insert id="insertRow"
             parameterType="todoRequestDTO">
+            <selectKey order="before" keyProperty="seq" resultType="java.lang.Integer">  
+                SELECT JDBC_SEQ.NEXTVAL FROM DUAL
+            </selectKey>
         INSERT INTO JDBC_TODO_TBL(SEQ, TITLE, CONTENT, PRIORITY)
         VALUES(JDBC_SEQ.NEXTVAL, #{title}, #{content}, #{priority})
     </insert>
-    <!-- <select id="selectRow">
-        SELECT * FROM JDBC_TODO_TBL
+    <select id="selectRow"
+            resultType="todoResponseDTO">
+        <![CDATA[
+            SELECT SEQ, TITLE, CONTENT, PRIORITY
+            FROM JDBC_TODO_TBL
+        ]]>
     </select>
-    <update id="updateRow">
-        UPDATE JDBC_TODO_TBL SET CONTENT = #{}, STATUS = #{} WHERE SEQ = #{}
+    <update id="updateRow"
+            parameterType="java.util.Map">
+        <![CDATA[
+            UPDATE JDBC_TODO_TBL 
+            SET CONTENT = #{content}, STATUS = #{status} WHERE SEQ = #{seq}
+        ]]> 
     </update>
+    
+    <delete id="deleteRow"
+            parameterType="java.lang.Integer">
+        DELETE FROM JDBC_TODO_TBL 
+        WHERE SEQ = #{seq}
+    </delete>
 
-    <delete id="deleteRow">
-        DELETE FROM JDBC_TODO_TBL WHERE SEQ = #{}
-    </delete> -->
+    <select id="readRow"
+            parameterType="java.lang.Integer"
+            resultType="todoResponseDTO">
+        SELECT * FROM JDBC_TODO_TBL 
+        WHERE SEQ = #{seq}
+    </select>
 </mapper>
