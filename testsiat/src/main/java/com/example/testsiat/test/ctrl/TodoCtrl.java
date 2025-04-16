@@ -84,7 +84,7 @@ public class TodoCtrl {
     // http://localhost:8080/test/view/1
     // 변수명이 동일해야 자동으로 매핑된다.
     @GetMapping("/read") // URL 경로를 지정하는 annotation
-    public String read(@RequestParam int seq, Model model) { // public String read( int seq)
+    public String read(@RequestParam("seq") int seq, Model model) { // public String read( int seq)
         System.out.println("debug >>>>> read test seq: " + seq);
         TodoResponseDTO response = service.readService(seq); // TestService의 readService() 메서드를 호출한다.
         System.out.println("debug >>>>> read test response: " + response);
@@ -130,25 +130,24 @@ public class TodoCtrl {
     // dto로 
     @PostMapping("/update") // URL 경로를 지정하는 annotation
     public String update(
-                            @RequestParam String title, // @RequestParam("param") String param
-                            @RequestParam String content, // @RequestParam(value="param", required=false) String param
-                            @RequestParam int priority // @RequestParam(value="param", defaultValue="default") String param
+                    @RequestParam("content") String content,
+                    @RequestParam("status") String status,
+                    @RequestParam("seq") int seq
                         ) { // dto와 같이 받는데.. 일단 RequestParam으로 받는다.
-        System.out.println("debug >>>>> update test : " + title + ", " + content + ", " + priority);
+        System.out.println("debug >>>>> update test : " + content + ", " + status);
         // 여기서 map으로 받아서 service.updateService(map)으로 넘겨준다.
         Map<String, Object> map = new HashMap<>();
-        map.put("title", title); // model에 seq를 추가한다.
         map.put("content", content); // model에 title을 추가한다.
-        map.put("priority", priority); // model에 content를 추가한다.
-
+        map.put("status", status); // model에 status 추가한다.
+        map.put("seq", seq);
         int flag = service.updateService(map); // TestService의 updateService() 메서드를 호출한다.
         System.out.println("debug >>>>> update test flag: " + flag);
         if (flag != 0) {
             System.out.println("debug >>>>> update test success: " + flag);
-            return "redirect:/todo/list"; // test/select.jsp 파일을 반환한다.
+            return "redirect:/todo/select"; // test/select.jsp 파일을 반환한다.
         } else {
             System.out.println("debug >>>>> update test fail: " + flag);
-            return "redirect:/test/update"; // test/update.jsp 파일을 반환한다.
+            return "redirect:/todo/select"; // test/update.jsp 파일을 반환한다.
             
         }
         // return "test/update"; // test/update.jsp 파일을 반환한다.
@@ -196,18 +195,18 @@ public class TodoCtrl {
     // }
     // http://localhost:8080/test/delete/1
     // 변수명이 동일해야 자동으로 매핑된다.
-    @DeleteMapping("/delete") // URL 경로를 지정하는 annotation
-    public String delete(@RequestParam int seq) { // public String read( int seq)
+    @GetMapping("/delete") // URL 경로를 지정하는 annotation
+    public String delete(@RequestParam("seq")  int seq) { // public String read( int seq)
         System.out.println("debug >>>>> delete test seq: " + seq);
 
         int flag = service.deleteService(seq); // TestService의 deleteService() 메서드를 호출한다.
         System.out.println("debug >>>>> delete test flag: " + flag);
         if (flag != 0) {
             System.out.println("debug >>>>> delete test success: " + flag);
-            return "redirect:/test/select"; // test/select.jsp 파일을 반환한다.
+            return "redirect:/todo/select"; // test/select.jsp 파일을 반환한다.
         } else {
             System.out.println("debug >>>>> delete test fail: " + flag);
-            return "redirect:/test/delete"; // test/delete.jsp 파일을 반환한다.
+            return "redirect:/todo/select"; // test/delete.jsp 파일을 반환한다.
             
         }
         // return "test/delete"; // test/delete.jsp 파일을 반환한다.
