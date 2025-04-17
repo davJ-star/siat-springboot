@@ -5,7 +5,10 @@
     <select id="loginRow"
             parameterType="userRequestDTO"
             resultType="userResponseDTO">
-            SELECT *
-            FROM SPRING_MEMBER_TBL 
+            <![CDATA[
+                SELECT ID, PWD, NAME
+                FROM SPRING_MEMBER_TBL 
+                WHERE ID = #{id} AND PWD = #{pwd}
+            ]]>
     </select>
 </mapper>

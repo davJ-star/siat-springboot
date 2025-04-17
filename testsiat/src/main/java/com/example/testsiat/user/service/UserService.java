@@ -8,13 +8,18 @@ import com.example.testsiat.user.dao.UserMapper;
 import com.example.testsiat.user.model.domain.UserRequestDTO;
 import com.example.testsiat.user.model.domain.UserResponseDTO;
 
+import lombok.extern.slf4j.Slf4j;
+
+
+@Slf4j
 @Service
 public class UserService {
     @Autowired
     private UserMapper userMapper; // UserMapper 객체를 주입받는다.
 
     public UserResponseDTO loginService(UserRequestDTO params) {
-        System.out.println("debug >>>>> login service");
+        log.info("debug >>>>> login service, params: " + params); // info 레벨로 로그를 남긴다.
+        // System.out.println("debug >>>>> login service");
         // UserResponseDTO userResponseDTO = new UserResponseDTO();
         // userResponseDTO.setId(params.getId());
         // userResponseDTO.setPassword(params.getPassword());

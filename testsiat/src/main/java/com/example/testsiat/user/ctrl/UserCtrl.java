@@ -3,6 +3,7 @@ package com.example.testsiat.user.ctrl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -39,9 +40,20 @@ public class UserCtrl {
         log.info("debug >>>>> login ctrl, params: " + params); // info 레벨로 로그를 남긴다.
 
         UserResponseDTO response = service.loginService(params); // UserService의 loginService() 메서드를 호출한다.
+        // Optional은 이미 service나 dao에서 체크해놨어야한다.
+        log.debug("debug >>>>> login ctrl, response: " + response); // debug 레벨로 로그를 남긴다.
 
         session.setAttribute("UserSession", response);
         return "redirect:/"; // 로그인 성공 시 redirect:/로 이동한다.
+    }
+
+    @GetMapping("/logout") // http://ip:port/user/logout
+    public String logout() {
+        System.out.println("debug >>>>> logout ctrl");
+        log.info("debug >>>>> logout ctrl"); // info 레벨로 로그를 남긴다.
+
+        session.invalidate(); // 세션을 무효화한다.
+        return "redirect:/"; // 로그아웃 성공 시 redirect:/로 이동한다.
     }
     
 }

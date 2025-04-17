@@ -11,6 +11,7 @@
       <div align = "center">
             섭섭이와 함께하는 도파민 터트리는 TodoWEB
       </div>
+	  <hr/>
       <div align = "right">
          <c:if test="${ UserSession == null }">
             <form action="./user/login" method = "post">
@@ -21,7 +22,7 @@
          </c:if>
          <c:if test="${ UserSession != null }">
                ${ UserSession.name } 님 환영합니다.
-               <a href = "./logout.todo">로그아웃</a>
+               <a href = "./user/logout">로그아웃</a>
          </c:if>
 
       </div>
