@@ -15,7 +15,7 @@ public class ValidService {
     // 읽기 전용으로 사용하자. 
     public int insertService(TodoRequestDTO params) { // @RequestParam (value="param", defaultValue="default") String param
         System.out.println("insertService() 호출");
-        dao.findById((int) 1L); // findById() 메소드 호출
+        // dao.findById(params.getSeq()); // findById() 메소드 호출
         //dao.
         TodoEntity entity = TodoEntity.builder()
                 .title(params.getTitle())

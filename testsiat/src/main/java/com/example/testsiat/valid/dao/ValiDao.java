@@ -36,6 +36,7 @@ import jakarta.persistence.criteria.CriteriaBuilder.In;
 
 @Repository
 public interface ValiDao extends JpaRepository<TodoEntity, Integer> {
+    
 
     // DB 연결을 위한 DAO 클래스
     // DB 연결을 위한 메소드들 정의

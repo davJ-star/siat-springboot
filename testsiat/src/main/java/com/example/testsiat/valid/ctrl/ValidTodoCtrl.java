@@ -53,10 +53,13 @@ public class ValidTodoCtrl {
                 map.put(fieldError.getField(), fieldError.getDefaultMessage());
     
             }
-            model.addAttribute("error", map); // 에러메시지를 model에 담는다.
+            model.addAttribute("validError", map); // 에러메시지를 model에 담는다.
+            return "register";
+        } else{
+
+            int flag = service.insertService(params);
         }
 
-        service.insertService(params);
         
         return null; // 
     } 
