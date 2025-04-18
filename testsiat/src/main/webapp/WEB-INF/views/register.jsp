@@ -7,10 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="../todo/insert" method="post">
+	<form action="../valid/insert" method="post">
 		<input type="text" name="title">
-		<input type="text" name="content">
-		<input type="number" name="priority" min = "1" max = "10">
+		${validation.title}
+		<input type="text" name="content"><br/>
+		${validation.content}
+		<input type="number" name="priority"><br/>
+		${validation.priority}
+		<input type="text" name="phone"><br/>
+		${validation.phone}
 		<input type="submit" name="작성하기">
 	</form>
 </body>

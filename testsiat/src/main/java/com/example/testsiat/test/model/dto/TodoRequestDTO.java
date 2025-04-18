@@ -1,7 +1,11 @@
 package com.example.testsiat.test.model.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +13,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.experimental.NonFinal;
 
 @Builder
 @Getter
@@ -66,16 +69,20 @@ public class TodoRequestDTO{
      */
 
     @Schema(description = "할일 번호", example = "1")
-    @NotBlank(message = "seq는 필수입니다.")
     private int     seq; 
     
-    @Schema(description = "제목", example = "할일 제목")
+    //@Schema(description = "제목", example = "할일 제목")
     @NotBlank(message = "title은 필수입니다.")
+    @NotEmpty(message = "title은 필수입니다.")
     private String  title;
 
-    @Schema(description = "내용", example = "할일 내용")
+    //@Schema(description = "내용", example = "할일 내용")
     @NotBlank(message = "content는 필수입니다.")
+    @NotEmpty(message = "content는 필수입니다.")
     private String  content;
+
+    @Pattern(regexp = "^\\d{2,3}-\\d{4}-\\d{4}$", message = "핸드폰 번호형식에 맞게 입력 요청")
+    private String phone;
     
     @Schema(description = "시작일", example = "2023-10-01")
     private String  startDate; // 원래는 삭제
@@ -86,8 +93,10 @@ public class TodoRequestDTO{
     @Schema(description = "상태", example = "진행중")
     private String status;
    
-    @Schema(description = "우선순위", example = "1")
-    @Size(min=1, max=10, message = "priority는 1~3 사이의 값이어야 합니다.")
+    //@Schema(description = "우선순위", example = "1")
+    // @Size(min=1, max=10, message = "priority는 1~3 사이의 값이어야 합니다.")
+    @Min(value = 1, message = "priority는 1~10 사이의 값이어야 합니다.")
+    @Max(value = 10, message = "priority는 1~10 사이의 값이어야 합니다.")
     private int     priority;
     // private int     sequence;
 }
