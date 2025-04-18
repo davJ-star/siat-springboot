@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
@@ -15,13 +16,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.testsiat.test.model.dto.TodoRequestDTO;
+import com.example.testsiat.valid.service.ValidService;
 
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/valid") // http://ip:port/valid
 public class RestValidTodoCtrl {
-    
+    // @Autowired
+    // private ValidService service; // ValidService 객체를 주입받는다.
+
     // insert 
     // http://localhost:8080/test/insert
     // http://ip:port

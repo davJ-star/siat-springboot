@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.testsiat.test.model.dto.TodoRequestDTO;
-
+import com.example.testsiat.valid.service.ValidService;
 
 import jakarta.validation.Valid;
 
@@ -26,6 +27,9 @@ import jakarta.validation.Valid;
 @Controller
 @RequestMapping("/valid") // http://ip:port/
 public class ValidTodoCtrl {
+    @Autowired
+    private ValidService service; // ValidService 객체를 주입받는다.
+
     // insert 
     // http://localhost:8080/test/insert
     // http://ip:port
@@ -52,6 +56,7 @@ public class ValidTodoCtrl {
             model.addAttribute("error", map); // 에러메시지를 model에 담는다.
         }
 
+        service.insertService(params);
         
         return null; // 
     } 
