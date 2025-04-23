@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -163,12 +165,12 @@ public class TodoCtrl {
     // http://localhost:8080/test/select
     // 변수명이 동일해야 자동으로 매핑된다.
     @GetMapping("/select") // URL 경로를 지정하는 annotation
-    public String select(Model model) { // public String read( int seq)
+    public ResponseEntity<List<TodoResponseDTO>> select(TodoRequestDTO dto) { // public String read( int seq)
         System.out.println("debug >>>>> select test model: " + model);
         List<TodoResponseDTO> list = service.selectService(); // TestService의 selectService() 메서드를 호출한다.
-        model.addAttribute("list", list); // model에 list를 추가한다.
+        // model.addAttribute("list", list); // model에 list를 추가한다.
 
-        return "list"; // test/select.jsp 파일을 반환한다.
+        return new ResponseEntity<>(list, HttpStatus.OK); // test/select.jsp 파일을 반환한다.
     }
     
     // @GetMapping("/select") // URL 경로를 지정하는 annotation
