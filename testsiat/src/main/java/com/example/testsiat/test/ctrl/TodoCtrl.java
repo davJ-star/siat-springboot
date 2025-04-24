@@ -166,7 +166,7 @@ public class TodoCtrl {
     // 변수명이 동일해야 자동으로 매핑된다.
     @GetMapping("/select") // URL 경로를 지정하는 annotation
     public ResponseEntity<List<TodoResponseDTO>> select(TodoRequestDTO dto) { // public String read( int seq)
-        System.out.println("debug >>>>> select test model: " + model);
+        // System.out.println("debug >>>>> select test model: " + model);
         List<TodoResponseDTO> list = service.selectService(); // TestService의 selectService() 메서드를 호출한다.
         // model.addAttribute("list", list); // model에 list를 추가한다.
 
