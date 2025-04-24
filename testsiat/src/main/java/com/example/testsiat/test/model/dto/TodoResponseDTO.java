@@ -22,7 +22,7 @@ public class TodoResponseDTO {
     @Schema(description = "시작일", example = "2023-10-01")
     private String  startDate;
     @Schema(description = "체크여부", example = "0")
-    private int     check;
+    private int     check;   
     @Schema(description = "상태", example = "진행중")
     private String  status;
     @Schema(description = "종료일", example = "2023-10-31")
