@@ -197,8 +197,10 @@ public class TodoCtrl {
     // }
     // http://localhost:8080/test/delete/1
     // 변수명이 동일해야 자동으로 매핑된다.
-    @GetMapping("/delete") // URL 경로를 지정하는 annotation
-    public String delete(@RequestParam("seq")  int seq) { // public String read( int seq)
+    @GetMapping("/delete/{seq}") // URL 경로를 지정하는 annotation
+    public String delete(@PathVariable("seq")  int seq) { // public String read( int seq)
+    // @GetMapping("/delete") // URL 경로를 지정하는 annotation
+    // public String delete(@RequestParam("seq")  int seq) { // public String read( int seq)
         System.out.println("debug >>>>> delete test seq: " + seq);
 
         int flag = service.deleteService(seq); // TestService의 deleteService() 메서드를 호출한다.
